@@ -1,0 +1,41 @@
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ai-center {
+    align-items: center;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+
+.col-sm-1-of-2 {
+    width: 100%;
+
+    @include respond-to('medium') {
+        width: 50%;
+    }
+}
+
+.order-md {
+    &-1 {
+        order: 2;
+
+        @include respond-to('medium') {
+            order: 1;
+
+        }
+    }
+
+    &-2 {
+        order: 1;
+
+        @include respond-to('medium') {
+            order: 2;
+
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.hero__title {
+    max-width: 46rem;
+    line-height: 1.2;
+
+    font-size: 4rem;
+    font-weight: var(--fs-700);
+
+    @include respond-to(small) {
+        font-size: 4.5rem;
+    }
+
+    @include respond-to(medium) {
+        font-size: 4.8rem;
+    }
+
+    @include respond-to(huge) {
+        font-size: 5.6rem;
+    }
+}
+
+.common-para {
+    font-size: 1.6rem;
+    max-width: 35rem;
+    line-height: 1.6;
+    opacity: 0.525;
+}

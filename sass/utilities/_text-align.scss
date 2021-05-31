@@ -1,0 +1,7 @@
+.ta-md-center {
+    text-align: center;
+
+    @include respond-to(medium) {
+        text-align: left;
+    }
+}

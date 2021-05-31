@@ -1,0 +1,49 @@
+.hero {
+    margin-top: 4.8rem;
+
+    @include respond-to(medium) {
+        margin-top: 8rem;
+    }
+
+    @include respond-to(huge) {
+        margin-top: 12rem;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        @include respond-to(medium) {
+            display: block;
+        }
+    }
+
+    &__img {
+        padding: .2rem;
+
+        @include respond-to(medium) {
+            transform: translateX(2rem);
+        }
+    }
+
+    &__desc {
+        margin-top: 1rem;
+
+        @include respond-to(small) {
+            margin-top: 1.8rem;
+        }
+    }
+
+    &__cta {
+        margin-top: 3rem;
+
+        @include respond-to(small) {
+            margin-top: 4rem;
+        }
+    }
+
+
+
+}
