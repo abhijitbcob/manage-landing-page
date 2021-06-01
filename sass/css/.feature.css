@@ -1,0 +1,13 @@
+.features__item {
+  display: grid;
+  grid-template-columns: 6rem 40rem;
+  grid-gap: 3rem;
+}
+.features__item-title-box {
+  grid-row: 0/1;
+  grid-column: 0/1;
+}
+.features__item-desc {
+  grid-row: 1/2;
+  grid-column: 1/2;
+}

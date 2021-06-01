@@ -9,6 +9,11 @@
         margin-top: 12rem;
     }
 
+    &__title {
+        max-width: 46rem;
+
+    }
+
     &__text {
         display: flex;
         flex-direction: column;
@@ -19,6 +24,8 @@
             display: block;
         }
     }
+
+
 
     &__img {
         padding: .2rem;

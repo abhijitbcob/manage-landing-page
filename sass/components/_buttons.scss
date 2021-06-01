@@ -4,11 +4,17 @@
     border-radius: 5rem;
     padding: 1.2rem 3.2rem;
     font-weight: var(--fs-700);
+    transition: all .2s;
 
     &--bright-red {
         background-color: var(--bright-red);
         color: var(--pure-white);
         box-shadow: 0 20px 16px -16px var(--op-bright-red);
+
+        &:hover,
+        &:active {
+            background-color: var(--bright-red-active);
+        }
     }
 
     &--white {

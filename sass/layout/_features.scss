@@ -1,0 +1,22 @@
+.features {
+    padding-block: 6rem;
+
+    @include respond-to(medium) {
+        padding-block: 8rem;
+
+    }
+
+    .container {
+        padding-right: 0;
+    }
+
+
+    &__header {
+        margin-bottom: 4rem;
+        padding-right: 2.4rem;
+
+        p {
+            display: inline-block;
+        }
+    }
+}
