@@ -1,0 +1,32 @@
+.slider {
+    &__item {
+        padding-top: 3.6rem;
+        margin: 1.5rem;
+
+    }
+
+    &__card {
+        max-width: 54rem;
+        padding-inline: 2.2rem;
+        padding-bottom: 4rem;
+        background-color: var(--very-light-gray);
+        gap: 2.5rem;
+        cursor: pointer;
+
+        @include respond-to(medium) {
+            padding-inline: 4rem;
+        }
+
+        &:not(:last-child) {
+            margin-right: 3rem;
+        }
+
+        min-height: 25.6rem;
+    }
+}
+
+.avatar {
+    height: 7.2rem;
+    width: 7.2rem;
+    margin-top: -3.2rem;
+}

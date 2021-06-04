@@ -1,0 +1,39 @@
+.banner {
+    padding-block: 6rem;
+    background-color: var(--bright-red);
+    line-height: 1.2;
+    position: relative;
+
+    &__content {
+        position: relative;
+        z-index: 10;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        inset: 0; // instead of top: 0, left: 0, right: 0, bottom: 0
+        background-image: url('../../images/bg-tablet-pattern.svg');
+        background-size: 74%;
+        background-position: 100% 10%;
+        background-repeat: no-repeat;
+        opacity: 0.1;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-image: url('../../images/bg-tablet-pattern.svg');
+        background-size: 74%;
+        background-repeat: no-repeat;
+        background-position: 250% 120%;
+        opacity: 0.1;
+    }
+}

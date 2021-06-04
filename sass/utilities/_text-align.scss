@@ -5,3 +5,15 @@
         text-align: left;
     }
 }
+
+.u-center-text {
+    text-align: center;
+}
+
+.ta-center-sm-right {
+    text-align: center;
+
+    @include respond-to(small) {
+        text-align: right;
+    }
+}
