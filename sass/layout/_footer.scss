@@ -48,10 +48,13 @@
             height: 3.2rem;
             fill: var(--pure-white);
             transition: fill .2s;
+            transform: scale(1.5);
+
 
             @include respond-to(medium) {
-                width: 2rem;
                 height: 2rem;
+                width: 2rem;
+                transform: scale(1);
             }
 
             &:hover {
@@ -96,9 +99,12 @@
     &__newsletter {
         grid-area: newsletter;
         align-self: start;
+        transform: scale(1.05);
+
 
         @include respond-to(medium) {
             justify-self: end;
+            transform: scale(1);
         }
 
         display: flex;

@@ -683,11 +683,13 @@ li {
   height: 3.2rem;
   fill: var(--pure-white);
   transition: fill 0.2s;
+  transform: scale(1.5);
 }
 @media (min-width: 800px) {
   .footer__socials svg {
-    width: 2rem;
     height: 2rem;
+    width: 2rem;
+    transform: scale(1);
   }
 }
 .footer__socials svg:hover {
@@ -725,6 +727,7 @@ li {
 .footer__newsletter {
   grid-area: newsletter;
   align-self: start;
+  transform: scale(1.05);
   display: flex;
   align-items: center;
   gap: 0.8rem;
@@ -732,6 +735,7 @@ li {
 @media (min-width: 800px) {
   .footer__newsletter {
     justify-self: end;
+    transform: scale(1);
   }
 }
 .footer__newsletter input {
