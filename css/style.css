@@ -553,7 +553,7 @@ li {
 }
 
 .features {
-  padding-block: 6rem;
+  padding-block: 3rem;
 }
 @media (min-width: 800px) {
   .features {
@@ -572,11 +572,21 @@ li {
 }
 
 .testimonials {
-  padding-block: 6.5rem;
+  padding-block: 2.5rem;
   overflow-x: hidden;
 }
+@media (min-width: 800px) {
+  .testimonials {
+    padding-block: 6.5rem;
+  }
+}
 .testimonials .slider {
-  margin-top: 5rem;
+  margin-top: 3.5rem;
+}
+@media (min-width: 800px) {
+  .testimonials .slider {
+    padding-block: 5rem;
+  }
 }
 .testimonials .cta {
   margin-top: 4.5rem;

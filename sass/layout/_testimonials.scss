@@ -1,9 +1,18 @@
 .testimonials {
-    padding-block: 6.5rem;
+    padding-block: 2.5rem;
     overflow-x: hidden;
 
+
+    @include respond-to(medium) {
+        padding-block: 6.5rem;
+    }
+
     .slider {
-        margin-top: 5rem;
+        margin-top: 3.5rem;
+
+        @include respond-to(medium) {
+            padding-block: 5rem;
+        }
     }
 
     .cta {
