@@ -10,10 +10,10 @@
     text-align: center;
 }
 
-.ta-center-sm-right {
+.ta-center-md-right {
     text-align: center;
 
-    @include respond-to(small) {
+    @include respond-to(medium) {
         text-align: right;
     }
 }

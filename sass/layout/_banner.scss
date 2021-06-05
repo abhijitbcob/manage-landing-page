@@ -1,8 +1,12 @@
 .banner {
-    padding-block: 6rem;
+    padding-block: 9rem;
     background-color: var(--bright-red);
     line-height: 1.2;
     position: relative;
+
+    @include respond-to(medium) {
+        padding-block: 6.2rem;
+    }
 
     &__content {
         position: relative;
@@ -16,13 +20,19 @@
         height: 100%;
         inset: 0; // instead of top: 0, left: 0, right: 0, bottom: 0
         background-image: url('../../images/bg-tablet-pattern.svg');
-        background-size: 74%;
-        background-position: 100% 10%;
+        background-size: 50rem;
+        background-position: 122% 5rem;
         background-repeat: no-repeat;
         opacity: 0.1;
+
+        @include respond-to(medium) {
+            background-size: 74%;
+            background-position: 100% 10%;
+        }
     }
 
     &::after {
+        display: none;
         content: '';
         position: absolute;
         width: 50%;
@@ -35,5 +45,9 @@
         background-repeat: no-repeat;
         background-position: 250% 120%;
         opacity: 0.1;
+
+        @include respond-to(medium) {
+            display: block;
+        }
     }
 }
