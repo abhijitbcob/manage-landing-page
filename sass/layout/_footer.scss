@@ -108,16 +108,33 @@
         }
 
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         gap: 0.8rem;
 
         input {
             border-radius: 5rem;
             font-size: 1.3rem;
             outline: none;
-            border: none;
             font-weight: var(--fs-400);
+            transition: all .2s;
         }
+
+        .form-group {
+            position: relative;
+        }
+
+        .error {
+            display: none;
+            position: absolute;
+            color: #F33C3C;
+            font-size: 1rem;
+            font-style: italic;
+            padding-left: 2rem;
+            padding-top: 0.5rem;
+            width: 100%;
+        }
+
+
     }
 
     &__copyright {
@@ -128,8 +145,6 @@
             justify-self: end;
         }
 
-
-
         font-size: 1.3rem;
         color: rgba(255, 255, 255, 0.5);
     }
@@ -139,6 +154,12 @@
 
 .email-input {
     padding: 1.3rem 3rem;
+    border: 1px solid transparent;
+}
+
+.input-error {
+    color: #F33C3C;
+    border-color: #F33C3C;
 }
 
 .submit-input {
@@ -146,6 +167,7 @@
     background-color: var(--bright-red);
     cursor: pointer;
     color: var(--pure-white);
+    border: none;
 
     &:hover,
     &:active {

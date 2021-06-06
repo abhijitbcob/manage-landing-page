@@ -17,5 +17,9 @@
 
     .cta {
         margin-top: 4.5rem;
+
+        @include respond-to(medium) {
+            margin-top: 0;
+        }
     }
 }

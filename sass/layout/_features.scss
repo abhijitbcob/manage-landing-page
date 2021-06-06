@@ -1,4 +1,5 @@
 .features {
+    position: relative;
     padding-block: 3rem;
 
     @include respond-to(medium) {
@@ -9,13 +10,30 @@
         padding-right: 0;
     }
 
-
     &__header {
         margin-bottom: 4rem;
         padding-right: 2.4rem;
 
         p {
             display: inline-block;
+        }
+    }
+
+    &::before {
+        display: none;
+        content: "";
+        position: absolute;
+        max-width: 45rem;
+        width: 100%;
+        top: 60%;
+        bottom: -50%;
+        background-image: url("../../images/bg-tablet-pattern.svg");
+        background-size: 160%;
+        background-repeat: no-repeat;
+        background-position: 130% 0%;
+
+        @include respond-to(medium) {
+            display: block;
         }
     }
 }

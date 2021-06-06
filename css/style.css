@@ -304,6 +304,7 @@ li {
 }
 
 .hero {
+  position: relative;
   margin-top: 4.8rem;
 }
 @media (min-width: 800px) {
@@ -344,6 +345,9 @@ li {
   .hero__desc {
     margin-top: 1.8rem;
   }
+}
+.hero .common-para {
+  font-size: 1.6rem;
 }
 .hero__cta {
   margin-top: 3rem;
@@ -529,7 +533,6 @@ li {
   margin: 1.5rem;
 }
 .slider__card {
-  max-width: 54rem;
   padding-inline: 2.2rem;
   padding-bottom: 4rem;
   background-color: var(--very-light-gray);
@@ -553,6 +556,7 @@ li {
 }
 
 .features {
+  position: relative;
   padding-block: 3rem;
 }
 @media (min-width: 800px) {
@@ -569,6 +573,24 @@ li {
 }
 .features__header p {
   display: inline-block;
+}
+.features::before {
+  display: none;
+  content: "";
+  position: absolute;
+  max-width: 45rem;
+  width: 100%;
+  top: 60%;
+  bottom: -50%;
+  background-image: url("../../images/bg-tablet-pattern.svg");
+  background-size: 160%;
+  background-repeat: no-repeat;
+  background-position: 130% 0%;
+}
+@media (min-width: 800px) {
+  .features::before {
+    display: block;
+  }
 }
 
 .testimonials {
@@ -590,6 +612,11 @@ li {
 }
 .testimonials .cta {
   margin-top: 4.5rem;
+}
+@media (min-width: 800px) {
+  .testimonials .cta {
+    margin-top: 0;
+  }
 }
 
 .banner {
@@ -739,7 +766,7 @@ li {
   align-self: start;
   transform: scale(1.05);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.8rem;
 }
 @media (min-width: 800px) {
@@ -752,8 +779,21 @@ li {
   border-radius: 5rem;
   font-size: 1.3rem;
   outline: none;
-  border: none;
   font-weight: var(--fs-400);
+  transition: all 0.2s;
+}
+.footer__newsletter .form-group {
+  position: relative;
+}
+.footer__newsletter .error {
+  display: none;
+  position: absolute;
+  color: #F33C3C;
+  font-size: 1rem;
+  font-style: italic;
+  padding-left: 2rem;
+  padding-top: 0.5rem;
+  width: 100%;
 }
 .footer__copyright {
   grid-area: copyright;
@@ -769,6 +809,12 @@ li {
 
 .email-input {
   padding: 1.3rem 3rem;
+  border: 1px solid transparent;
+}
+
+.input-error {
+  color: #F33C3C;
+  border-color: #F33C3C;
 }
 
 .submit-input {
@@ -776,6 +822,7 @@ li {
   background-color: var(--bright-red);
   cursor: pointer;
   color: var(--pure-white);
+  border: none;
 }
 .submit-input:hover, .submit-input:active {
   background-color: var(--bright-red-active);
