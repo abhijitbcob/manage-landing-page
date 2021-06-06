@@ -302,6 +302,11 @@ li {
   padding: 2.5rem;
   z-index: 5;
 }
+@media (min-width: 1000px) {
+  .overlay {
+    display: none !important;
+  }
+}
 
 .hero {
   position: relative;
@@ -530,7 +535,6 @@ li {
 
 .slider__item {
   padding-top: 3.6rem;
-  margin: 1.5rem;
 }
 .slider__card {
   padding-inline: 2.2rem;
