@@ -247,7 +247,7 @@ li {
 .header-hero-wrapper {
   overflow: auto;
   position: relative;
-  min-height: 100vh;
+  min-height: 82vh;
 }
 .header-hero-wrapper::after {
   content: "";
