@@ -43,6 +43,10 @@
 
         gap: 1.3rem;
 
+        a:focus svg path {
+            fill: var(--bright-red);
+        }
+
         svg {
             width: 3.2rem;
             height: 3.2rem;
@@ -89,6 +93,11 @@
         li a:hover,
         li a:active {
             color: var(--bright-red);
+        }
+
+        li a:focus {
+            outline: 3px dotted var(--pure-white);
+            outline-offset: 1rem;
         }
 
         li:not(:last-child) {
@@ -155,11 +164,18 @@
 .email-input {
     padding: 1.3rem 3rem;
     border: 1px solid transparent;
+
+    &:focus {
+        outline: 3px dotted;
+        outline-color: var(--pure-white);
+        outline-offset: 4px;
+    }
 }
+
 
 .input-error {
     color: #F33C3C;
-    border-color: #F33C3C;
+    outline-color: var(--bright-red) !important;
 }
 
 .submit-input {
@@ -172,5 +188,10 @@
     &:hover,
     &:active {
         background-color: var(--bright-red-active);
+    }
+
+    &:focus {
+        outline: 3px dotted var(--pure-white);
+        outline-offset: 4px;
     }
 }

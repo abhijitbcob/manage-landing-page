@@ -32,10 +32,9 @@ $(".slider").slick({
 const inputGroup = document.querySelector(".form-group");
 const emailInput = document.querySelector(".email-input");
 const submitBtn = document.querySelector(".submit-input");
+const error = document.querySelector(".error");
 
 function ValidateEmail(inputText) {
-  const error = document.querySelector(".error");
-
   var mailformat =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
   if (inputText.value.match(mailformat)) {
@@ -54,4 +53,9 @@ emailInput.addEventListener("keyup", function () {
 submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
   ValidateEmail(emailInput);
+});
+
+emailInput.addEventListener("blur", function () {
+  error.style.display = "none";
+  emailInput.classList.remove("input-error");
 });

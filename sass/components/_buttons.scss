@@ -16,6 +16,11 @@
         &:active {
             background-color: var(--bright-red-active);
         }
+
+        &:focus {
+            outline: 3px dotted var(--bright-red);
+            outline-offset: 5px;
+        }
     }
 
     &--white {
@@ -25,6 +30,11 @@
         &:hover,
         &:active {
             color: hsla(12, 88%, 59%, 0.5);
+        }
+
+        &:focus {
+            outline: 3px dotted var(--pure-white);
+            outline-offset: 5px;
         }
     }
 

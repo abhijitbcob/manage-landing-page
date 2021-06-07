@@ -6,7 +6,6 @@
 }
 
 .nav {
-
     &__list {
         gap: 3.3rem;
     }
@@ -16,7 +15,11 @@
         font-size: 1.3rem;
         color: var(--dark-blue);
         transition: opacity .2s;
+    }
 
+    &__link:focus {
+        outline: 3px dotted var(--bright-red);
+        outline-offset: 1.2rem;
     }
 
     &__link:hover,

@@ -378,6 +378,10 @@ li {
   color: var(--dark-blue);
   transition: opacity 0.2s;
 }
+.nav__link:focus {
+  outline: 3px dotted var(--bright-red);
+  outline-offset: 1.2rem;
+}
 .nav__link:hover, .nav__link:active {
   opacity: 0.5;
 }
@@ -462,12 +466,20 @@ li {
 .cta--bright-red:hover, .cta--bright-red:active {
   background-color: var(--bright-red-active);
 }
+.cta--bright-red:focus {
+  outline: 3px dotted var(--bright-red);
+  outline-offset: 5px;
+}
 .cta--white {
   background-color: var(--pure-white);
   color: var(--bright-red);
 }
 .cta--white:hover, .cta--white:active {
   color: rgba(242, 95, 58, 0.5);
+}
+.cta--white:focus {
+  outline: 3px dotted var(--pure-white);
+  outline-offset: 5px;
 }
 
 .features__item {
@@ -719,6 +731,9 @@ li {
   align-self: end;
   gap: 1.3rem;
 }
+.footer__socials a:focus svg path {
+  fill: var(--bright-red);
+}
 .footer__socials svg {
   width: 3.2rem;
   height: 3.2rem;
@@ -761,6 +776,10 @@ li {
 .footer__navigation li a:hover,
 .footer__navigation li a:active {
   color: var(--bright-red);
+}
+.footer__navigation li a:focus {
+  outline: 3px dotted var(--pure-white);
+  outline-offset: 1rem;
 }
 .footer__navigation li:not(:last-child) {
   margin-bottom: 1.3rem;
@@ -815,10 +834,15 @@ li {
   padding: 1.3rem 3rem;
   border: 1px solid transparent;
 }
+.email-input:focus {
+  outline: 3px dotted;
+  outline-color: var(--pure-white);
+  outline-offset: 4px;
+}
 
 .input-error {
   color: #F33C3C;
-  border-color: #F33C3C;
+  outline-color: var(--bright-red) !important;
 }
 
 .submit-input {
@@ -830,4 +854,8 @@ li {
 }
 .submit-input:hover, .submit-input:active {
   background-color: var(--bright-red-active);
+}
+.submit-input:focus {
+  outline: 3px dotted var(--pure-white);
+  outline-offset: 4px;
 }
