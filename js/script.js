@@ -1,5 +1,6 @@
 "use strict";
 
+// Slick carousel
 $(".slider").slick({
   slidesToShow: 3,
   slidesToScroll: 1,
@@ -22,31 +23,29 @@ $(".slider").slick({
         dots: true,
       },
     },
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
   ],
 });
 
 // Email validation
-const inputGroup = document.querySelector(".form-group");
 const emailInput = document.querySelector(".email-input");
 const submitBtn = document.querySelector(".submit-input");
-const error = document.querySelector(".error");
+const errorMessage = document.querySelector(".error-message");
 
 function ValidateEmail(inputText) {
   var mailformat =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
   if (inputText.value.match(mailformat)) {
-    error.style.display = "none";
-    emailInput.classList.remove("input-error");
+    errorMessage.style.display = "none";
+    emailInput.classList.remove("red-outline");
+    submitBtn.classList.remove("red-outline");
   } else {
-    error.style.display = "block";
-    emailInput.classList.add("input-error");
+    errorMessage.style.display = "block";
+    emailInput.classList.add("red-outline");
+    submitBtn.classList.add("red-outline");
   }
 }
 
-emailInput.addEventListener("keyup", function () {
+emailInput.addEventListener("keydown", function () {
   ValidateEmail(emailInput);
 });
 
@@ -56,6 +55,6 @@ submitBtn.addEventListener("click", (e) => {
 });
 
 emailInput.addEventListener("blur", function () {
-  error.style.display = "none";
-  emailInput.classList.remove("input-error");
+  errorMessage.style.display = "none";
+  emailInput.classList.remove("red-outline");
 });

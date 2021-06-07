@@ -801,22 +801,11 @@ li {
 .footer__newsletter input {
   border-radius: 5rem;
   font-size: 1.3rem;
-  outline: none;
   font-weight: var(--fs-400);
   transition: all 0.2s;
 }
 .footer__newsletter .form-group {
   position: relative;
-}
-.footer__newsletter .error {
-  display: none;
-  position: absolute;
-  color: #F33C3C;
-  font-size: 1rem;
-  font-style: italic;
-  padding-left: 2rem;
-  padding-top: 0.5rem;
-  width: 100%;
 }
 .footer__copyright {
   grid-area: copyright;
@@ -833,16 +822,27 @@ li {
 .email-input {
   padding: 1.3rem 3rem;
   border: 1px solid transparent;
+  outline: 3px dotted;
+  outline-offset: 4px;
+  outline-color: transparent;
 }
 .email-input:focus {
-  outline: 3px dotted;
   outline-color: var(--pure-white);
-  outline-offset: 4px;
 }
 
-.input-error {
+.red-outline {
+  outline-color: #F33C3C !important;
+}
+
+.error-message {
+  display: none;
+  position: absolute;
   color: #F33C3C;
-  outline-color: var(--bright-red) !important;
+  font-size: 1rem;
+  font-style: italic;
+  padding-left: 2rem;
+  padding-top: 0.5rem;
+  width: 100%;
 }
 
 .submit-input {
